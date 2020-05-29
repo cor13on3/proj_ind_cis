@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 using Xamarin.Forms;
-
-using App1.Models;
 using App1.Services;
+using App1.Models;
 
 namespace App1.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Zajecia> DataStore => DependencyService.Get<IDataStore<Zajecia>>() ?? new MockDataStore();
+        protected IDataStore<T> GetDataStore<T>() where T : ModelBase
+        {
+            return DependencyService.Get<IDataStore<T>>() ?? new MockDataStore<T>();
+        }
 
         bool isBusy = false;
         public bool IsBusy

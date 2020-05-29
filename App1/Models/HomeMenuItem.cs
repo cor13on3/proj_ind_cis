@@ -10,6 +10,7 @@ namespace App1.Models
         Wykladowcy,
         ZmienGrupe
     }
+
     public class AppMenuItem
     {
         public MenuItemType Id { get; set; }

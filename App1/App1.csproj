@@ -16,13 +16,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\ZajeciaPage.xaml.cs">
-      <DependentUpon>ZajeciaPage.xaml</DependentUpon>
+    <Compile Update="Views\ZajeciaSzczegolyPage.xaml.cs">
+      <DependentUpon>ZajeciaSzczegolyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PlanZajecPage.xaml.cs">
+      <DependentUpon>PlanZajecPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WykladowcyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

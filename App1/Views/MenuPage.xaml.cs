@@ -5,8 +5,6 @@ using Xamarin.Forms;
 
 namespace App1.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage
     {
@@ -18,9 +16,9 @@ namespace App1.Views
 
             menuItems = new List<AppMenuItem>
             {
-                new AppMenuItem {Id = MenuItemType.PlanZajec, Title="Plan zajęć" },
-                new AppMenuItem {Id = MenuItemType.Wykladowcy, Title="Wykładowcy" },
-                new AppMenuItem {Id = MenuItemType.ZmienGrupe, Title="Zmień grupę" },
+                new AppMenuItem {Id = MenuItemType.PlanZajec, Title = "Plan zajęć" },
+                new AppMenuItem {Id = MenuItemType.Wykladowcy, Title = "Wykładowcy" },
+                new AppMenuItem {Id = MenuItemType.ZmienGrupe, Title = "Zmień grupę" },
             };
 
             ListViewMenu.ItemsSource = menuItems;

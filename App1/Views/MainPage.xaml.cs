@@ -6,8 +6,6 @@ using App1.Models;
 
 namespace App1.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
@@ -17,8 +15,6 @@ namespace App1.Views
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
-
-            //MenuPages.Add((int)MenuItemType.PlanZajec, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -28,10 +24,10 @@ namespace App1.Views
                 switch (id)
                 {
                     case (int)MenuItemType.PlanZajec:
-                        MenuPages.Add(id, new NavigationPage(new ZajeciaPage()));
+                        MenuPages.Add(id, new NavigationPage(new PlanZajecPage()));
                         break;
                     case (int)MenuItemType.Wykladowcy:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        MenuPages.Add(id, new NavigationPage(new WykladowcyPage()));
                         break;
                     case (int)MenuItemType.ZmienGrupe:
                         MenuPages.Add(id, new NavigationPage(new LoginPage()));

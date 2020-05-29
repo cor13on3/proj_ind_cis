@@ -21,9 +21,9 @@ namespace App1.ViewModels
 
         private async void ExecuteZapiszCommand()
         {
-            var vm = new ItemsViewModel();
+            var vm = new ZajeciaViewModel();
             vm.NumerGrupy = NumerGrupy;
-            await Navigation.PushAsync(new NavigationPage(new ZajeciaPage(vm)), true);
+            await Navigation.PushAsync(new NavigationPage(new PlanZajecPage(vm)), true);
         }
     }
 }
